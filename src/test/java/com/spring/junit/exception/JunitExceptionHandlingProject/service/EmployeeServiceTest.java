@@ -103,10 +103,14 @@ public class EmployeeServiceTest {
 
         when(repository.findAll()).thenReturn(employeeList);
 
+
         service.removeEmployee(0L);
         employeeList.remove(0);
 
         assertEquals(0, service.getEmployees().size());
+
+
+
     }
 
 }
